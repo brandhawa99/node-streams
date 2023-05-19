@@ -22,6 +22,7 @@ class FileWriteStream extends Writeable {
     // do our write operation
 
 
+
     // when we're done, we should call the callback 
     callback();
   }
