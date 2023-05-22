@@ -76,7 +76,10 @@ const stream = new FileWriteStream({
   fileName: "test.txt"
 })
 
-stream.write(Buffer.from("HELLO \n"))
+for (let i = 0; i < 10000; i++) {
+  stream.write(Buffer.from(` ${i} `))
+}
+
 stream.end(Buffer.from("ENDING STREAM"))
 stream.on("finish", () => {
   console.log("Stream was finished");
